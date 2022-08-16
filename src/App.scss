@@ -1,3 +1,76 @@
+@use "./styles/partials/media" as *;
+@use "./styles/partials/fonts" as *;
+@use "./styles/partials/colors" as *;
+
+@mixin ul-reset() {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  margin: 0;
+    font-family: "AvenirNext", sans-serif;
+}
+
+h1 {
+  font-size: 2.0625rem;
+  line-height: 2.75rem;
+  font-weight: 700;
+  @include tablet {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+h2, label {
+  font-size: .75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: .875rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+  @include tablet {
+    font-size: .8125rem;
+    line-height: 1.125rem;
+  }
+}
+
+p, span, a, h4 {
+  font-size: .875rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  @include tablet {
+    font-size: .8125rem;
+    line-height: 1.125rem;
+  }
+}
+
+.button {
+  display: block;
+  height: 2.5rem;
+  border-radius: 4px;
+  font-size: .75rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  @include tablet {
+    max-width: 9.375rem;
+    padding: 0 2rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.logo {
+  max-height: 1.5625rem;
+  max-width: 7.5rem;
 }
