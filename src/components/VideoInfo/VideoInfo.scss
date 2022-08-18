@@ -1,0 +1,53 @@
+@use "../../styles/partials/media" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/colors" as *;
+
+.video-info {
+    padding: 1.125rem;
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__analytics {
+        border-top: 1.5px solid $secondary-color-divider;
+        border-bottom: 1.5px solid $secondary-color-divider;
+        padding: 0.875rem 0;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__channel {
+        width: 50%;
+    }
+    
+    &__views {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        margin-bottom: 1rem;
+        color: $primary-color-label;
+        
+        &-icon {
+            margin-right: 0.5rem;
+        }
+    }
+    
+    &__date {
+        width: 50%;
+        color: $primary-color-label;
+    }
+
+    &__likes {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        color: $primary-color-label;
+
+        &-icon {
+            margin-right: 0.5rem;
+        }
+    }
+}

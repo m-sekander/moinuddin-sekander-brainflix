@@ -1,8 +1,8 @@
 import './VideoPlayer.scss'
 
-function VideoPlayer({video}) {
+function VideoPlayer({image}) {
     return (
-        <video className="videoPlayer" poster={video.image} controls></video>
+        <video className="video-player" poster={image} controls></video>
     )
 }
 

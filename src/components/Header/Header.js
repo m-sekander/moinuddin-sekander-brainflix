@@ -3,7 +3,7 @@ import logo from '../../assets/images/BrainFlix-logo.svg'
 import SearchIcon from '../../assets/images/search.svg'
 import avatar from '../../assets/images/Mohan-muruge.jpg'
 import Button from '../Button/Button';
-import upload from '../../assets/images/upload.svg';
+import uploadIcon from '../../assets/images/upload.svg';
 
 function Header() {
     return (
@@ -14,7 +14,7 @@ function Header() {
                 <img className="header__icon" src={SearchIcon} alt="" />
                 <img className="header__avatar" src={avatar} alt="Mohan's avatar" />
             </div>
-            <Button text="Upload" icon={upload}></Button>
+            <Button text="Upload" icon={uploadIcon}></Button>
         </header>
     );
 }
