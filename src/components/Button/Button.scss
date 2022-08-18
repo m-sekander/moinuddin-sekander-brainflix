@@ -1,10 +1,17 @@
-@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/media" as *;
 @use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/colors" as *;
 
 .button {
+    display: block;
+    height: 2.5rem;
     width: 100%;
     border: 0;
     border-radius: 4px;
+    font-size: .75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    font-family: inherit;
     background-color: $primary-color-cta-outline;
     color: $primary-color-cta-text;
     display: flex;
@@ -12,6 +19,14 @@
     align-items: center;
     text-transform: uppercase;
     position: relative;
+    @include tablet {
+        max-width: 9.375rem;
+        padding: 0 2rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
 
     &__icon {
         position: absolute;

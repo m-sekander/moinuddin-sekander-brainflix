@@ -52,26 +52,3 @@ p, span, a, h4 {
     line-height: 1.125rem;
   }
 }
-
-.button {
-  display: block;
-  height: 2.5rem;
-  border-radius: 4px;
-  font-size: .75rem;
-  line-height: 1.25rem;
-  font-weight: 700;
-  font-family: inherit;
-  @include tablet {
-    max-width: 9.375rem;
-    padding: 0 2rem;
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.logo {
-  max-height: 1.5625rem;
-  max-width: 7.5rem;
-}

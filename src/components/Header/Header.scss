@@ -1,0 +1,54 @@
+@use "../../styles/partials/media" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/colors" as *;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 1.125rem;
+
+    &__logo {
+        max-height: 1.5625rem;
+        max-width: 7.5rem;
+        margin: 0 auto 1rem;
+    }
+
+    &__bar {
+        display: flex;
+        position: relative;
+        margin-bottom: 1rem;
+    }
+    
+    &__search {
+        font-family: inherit;
+        width: 100%;
+        height: 2.5rem;
+        padding-left: 2rem;
+        background-color: $secondary-color-form-background;
+        border: 1px solid $primary-color-label;
+        border-radius: 4px;
+        margin-right: 1rem;
+
+        &::placeholder {
+            color: $primary-color-text;
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        left: 0.5rem;
+        top: 0.625rem;
+    }
+
+    &__avatar {
+        border-radius: 50%;
+        max-width: 2.25rem;
+        height: 2.25rem;
+        object-fit: cover;
+        object-position: 15%;
+        @include tablet {
+            max-width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+}

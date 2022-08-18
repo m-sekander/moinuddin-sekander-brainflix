@@ -1,12 +1,10 @@
 import './App.scss';
-import Button from './components/Button/Button';
-import Upload from './assets/images/upload.svg'
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="app">
-      <h1>Hello World!!!</h1>
-      <Button className="button" text="Upload" icon={Upload}></Button>
+      <Header></Header>
     </div>
   );
 }
