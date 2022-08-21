@@ -1,7 +1,5 @@
 import './CommentsSection.scss'
-import avatar from '../../assets/images/Mohan-muruge.jpg'
-import Button from '../Button/Button'
-import commentIcon from '../../assets/images/add_comment.svg'
+import CommentsEngagement from '../CommentsEngagement/CommentsEngagement'
 
 function CommentsSection({formatEpoch, comments}) {
     const mappedComments = comments.map((comment, i) => {
@@ -22,16 +20,7 @@ function CommentsSection({formatEpoch, comments}) {
     return (
         <div className="commentsSection">
             <h3 className="commentsSection__amount">{comments.length} Comments</h3>
-            <div className="commentsEngagement">
-                <img className="commentsEngagement__avatar" src={avatar} alt="serious man facing left" />
-                <form className="commentsEngagement__form">
-                    <label className="commentsEngagement__label" htmlFor="comment">
-                        Join the conversation
-                        <textarea className="commentsEngagement__comment" id="comment" name="comment" placeholder="Add a new comment"></textarea>
-                    </label>
-                    <Button text="Comment" icon={commentIcon}></Button>
-                </form>
-            </div>
+            <CommentsEngagement></CommentsEngagement>
             <div className="commentsList">
                 {mappedComments}
             </div>
