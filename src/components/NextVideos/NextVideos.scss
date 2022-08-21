@@ -9,23 +9,4 @@
         color: $primary-color-label;
         margin-bottom: 1.125rem;
     }
-
-    .video {
-        display: flex;
-        margin-top: 0.8125rem;
-
-        &__image {
-            min-width: 6.625rem;
-            height: calc(6.625rem * 9 / 16);
-            border-radius: 4px;
-            object-fit: cover;
-            margin-right: 1rem;
-        }
-
-        &__details {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-    }
 }

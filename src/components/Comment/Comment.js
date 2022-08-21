@@ -2,7 +2,7 @@ import './Comment.scss'
 
 function Comment({formatEpoch, comment, index}) {
     return (
-        <div key={index} className="comment">
+        <div className="comment">
             <div className="comment__placeholder"></div>
             <div className="comment__info">
                 <div className="comment__top">

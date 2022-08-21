@@ -5,7 +5,7 @@ import Comment from '../Comment/Comment'
 function CommentsSection({formatEpoch, comments}) {
     const mappedComments = comments.map((comment, i) => {
         return (
-            <Comment formatEpoch={formatEpoch} comment={comment} index={i}></Comment>
+            <Comment formatEpoch={formatEpoch} comment={comment} key={i}></Comment>
         )
     })
 
