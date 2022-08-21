@@ -4,9 +4,19 @@
 
 .next-videos {
     padding: 1.125rem;
+    @include tablet {
+        padding: 1.625rem 2.25rem;
+        width: 47.5%;
+    }
+    @include desktop {
+        width: 75%;
+    }
 
     &__title {
         color: $primary-color-label;
         margin-bottom: 1.125rem;
+        @include tablet {
+            margin-bottom: 1.5rem;
+        }
     }
 }

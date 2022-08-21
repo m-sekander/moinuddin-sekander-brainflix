@@ -46,9 +46,13 @@ function Main() {
     return (
         <main className="main">
             <VideoPlayer image={selectedVideo.image}></VideoPlayer>
-            <VideoInfo formatEpoch={formatEpoch} title={selectedVideo.title} channel={selectedVideo.channel} description={selectedVideo.description} views={selectedVideo.views} likes={selectedVideo.likes} timestamp={selectedVideo.timestamp}></VideoInfo>
-            <CommentsSection formatEpoch={formatEpoch} comments={selectedVideo.comments}></CommentsSection>
-            <NextVideos videos={nonSelectedVideos} handleClick={handleClick}></NextVideos>
+            <div className="main__sundry">
+                <div className="main__details">
+                    <VideoInfo formatEpoch={formatEpoch} title={selectedVideo.title} channel={selectedVideo.channel} description={selectedVideo.description} views={selectedVideo.views} likes={selectedVideo.likes} timestamp={selectedVideo.timestamp}></VideoInfo>
+                    <CommentsSection formatEpoch={formatEpoch} comments={selectedVideo.comments}></CommentsSection>
+                </div>
+                <NextVideos videos={nonSelectedVideos} handleClick={handleClick}></NextVideos>
+            </div>
         </main>
     )
 }

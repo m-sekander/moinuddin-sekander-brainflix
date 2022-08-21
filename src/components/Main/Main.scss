@@ -1,0 +1,19 @@
+@use "../../styles/partials/media" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/colors" as *;
+
+.main {
+    &__sundry {
+        @include desktop {
+            display: flex;
+            max-width: $media-desktop;
+            margin: 0 auto;
+        }
+    }
+
+    &__details {
+        @include desktop {
+            border-right: 1px solid $secondary-color-divider;
+        }
+    }
+}
