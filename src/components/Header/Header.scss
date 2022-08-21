@@ -25,12 +25,17 @@
         height: 2.5rem;
         padding-left: 2rem;
         background-color: $secondary-color-form-background;
-        border: 1px solid $primary-color-label;
+        border: 1px solid $secondary-color-divider;
         border-radius: 4px;
         margin-right: 1rem;
+        color: $primary-color-text;
 
         &::placeholder {
             color: $primary-color-text;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $primary-color-cta-outline;
         }
     }
 

@@ -13,7 +13,7 @@ function VideoInfo({formatEpoch, title, channel, description, views, likes, time
                 <img className="video-info__views-icon" src={viewsIcon} alt="" />
                 <p className="video-info__views-count">{views}</p>
             </div>
-            <p className="video-info__date">{formatEpoch(timestamp)}</p>
+            <span className="video-info__date">{formatEpoch(timestamp)}</span>
             <div className="video-info__likes">
                 <img className="video-info__likes-icon" src={likesIcon} alt="" />
                 <p className="video-info__likes-count">{likes}</p>

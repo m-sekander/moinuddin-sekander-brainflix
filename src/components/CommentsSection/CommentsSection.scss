@@ -1,0 +1,96 @@
+@use "../../styles/partials/media" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/colors" as *;
+
+.commentsSection {
+    padding: 0 1.125rem;
+
+    &__amount {
+        margin-bottom: 0.25rem;
+    }
+    
+    .commentsEngagement {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid $secondary-color-divider;
+        padding: 1rem 0;
+
+        &__avatar {
+            border-radius: 50%;
+            max-width: 2.25rem;
+            height: 2.25rem;
+            object-fit: cover;
+            object-position: 15%;
+            margin: 1.375rem 0.875rem 0 0;
+        }
+
+        &__form {
+            width: 100%;
+        }
+
+        &__label {
+            display: flex;
+            flex-direction: column;
+            color: $primary-color-label;
+            letter-spacing: 0.03125rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        &__comment {
+            font-family: inherit;
+            height: 6.25rem;
+            padding: 0.75rem;
+            background-color: $secondary-color-form-background;
+            border: 1px solid $secondary-color-divider;
+            border-radius: 4px;
+            resize: none;
+            color: $primary-color-text;
+            margin-top: 0.125rem;
+
+            &::placeholder {
+                color: $primary-color-text;
+            }
+    
+            &:focus-visible {
+                outline: 2px solid $primary-color-cta-outline;
+            }
+        }
+    
+    }
+
+    .comment {
+        display: flex;
+        border-bottom: 1px solid $secondary-color-divider;
+        padding: 0.1875rem 0;
+
+        &__placeholder {
+            background-color: $secondary-color-divider;
+            margin-top: 0.625rem;
+            min-width: 2.25rem;
+            height: 2.25rem;
+            border-radius: 50%;
+        }
+
+        &__info {
+            margin-left: 1rem;
+            width: 100%;
+        }
+    
+        &__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.625rem;
+        }
+
+        &__date {
+            color: $primary-color-label;
+        }
+    
+        &__para {
+            margin: 0.4375rem 0;
+            line-height: 1.1875rem;
+        }
+    }
+}
