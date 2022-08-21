@@ -25,12 +25,15 @@ function Main() {
         }
     }
 
+    // Setup of the state on first video of the file
     const [selectedVideo, setSelectedVideo] = useState(videoDetails[0]);
     
+    // Shows all videos but the one selected
     const nonSelectedVideos = videos.filter((video) => {
         return video.id !== selectedVideo.id
     })
-
+    
+    // Click event that changes the state and scrolls to the top of the page
     const handleClick = (videoId) => {
         const newSelectedVideo = videoDetails.find((video) => {
             return videoId === video.id

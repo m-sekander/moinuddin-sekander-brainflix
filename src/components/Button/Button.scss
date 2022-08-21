@@ -10,7 +10,7 @@
     border-radius: 4px;
     font-size: .75rem;
     line-height: 1.25rem;
-    font-weight: 700;
+    font-weight: 600;
     font-family: inherit;
     background-color: $primary-color-cta-outline;
     color: $primary-color-cta-text;
@@ -26,6 +26,8 @@
 
     &:hover {
         cursor: pointer;
+        background-color: $secondary-color-cta-hover;
+
     }
 
     &__icon {

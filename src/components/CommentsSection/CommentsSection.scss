@@ -7,11 +7,18 @@
     @include tablet {
         padding: 0 2.25rem;
     }
+    @include desktop {
+        padding: 0;
+    }
 
     &__amount {
         margin-bottom: 0.25rem;
+        font-weight: 700;
         @include tablet {
             margin-bottom: 0;
+        }
+        @include desktop {
+            margin-bottom: 0.25rem;
         }
     }
 }

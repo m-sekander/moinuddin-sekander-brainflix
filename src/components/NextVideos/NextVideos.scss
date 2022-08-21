@@ -5,16 +5,17 @@
 .next-videos {
     padding: 1.125rem;
     @include tablet {
-        padding: 1.625rem 2.25rem;
+        padding: 1.625rem 1.325rem 1.625rem 2.25rem;
         width: 47.5%;
     }
     @include desktop {
-        width: 75%;
+        width: 42.5%;
+        padding: 2rem 0 4rem 1.25rem;
     }
 
     &__title {
         color: $primary-color-label;
-        margin-bottom: 1.125rem;
+        margin-bottom: 1rem;
         @include tablet {
             margin-bottom: 1.5rem;
         }

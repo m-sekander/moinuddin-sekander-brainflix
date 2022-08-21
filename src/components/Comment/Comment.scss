@@ -9,6 +9,13 @@
     @include tablet {
         padding: 0.75rem 0;
     }
+    @include desktop {
+        padding-right: 1.75rem;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
 
     &__placeholder {
         background-color: $secondary-color-divider;
@@ -43,6 +50,11 @@
         line-height: 1.1875rem;
         @include tablet {
             line-height: 1.3125rem;
+            width: 99.5%;
+        }
+        @include desktop {
+            line-height: 1.5rem;
+            width: 92.5%;
         }
     }
 }

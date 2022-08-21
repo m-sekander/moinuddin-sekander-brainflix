@@ -3,7 +3,18 @@ import CommentsEngagement from '../CommentsEngagement/CommentsEngagement'
 import Comment from '../Comment/Comment'
 
 function CommentsSection({formatEpoch, comments}) {
-    const mappedComments = comments.map((comment, i) => {
+    // Sorts the comments newest first
+    function sortComments(a, b) {
+        if (a.timestamp > b.timestamp) {
+            return -1;
+        } else if (a.timestamp < b.timestamp) {
+            return 1;
+        } else return 0;
+    }
+    const sortedComments = comments.sort(sortComments);
+
+    // Maps through each comment in the array and outputs a comment component for each
+    const mappedComments = sortedComments.map((comment, i) => {
         return (
             <Comment formatEpoch={formatEpoch} comment={comment} key={i}></Comment>
         )

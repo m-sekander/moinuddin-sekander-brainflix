@@ -17,6 +17,9 @@
     @include tablet {
         padding: 1.5rem 2.25rem 2rem;
     }
+    @include desktop {
+        padding: 2rem 0 2.5rem;
+    }
 
     &__title {
         margin-bottom: 1rem;
@@ -35,6 +38,10 @@
             border-top: none;
             padding: 0.5rem 0;
         }
+        @include desktop {
+            padding-right: 1.75rem;
+            margin-bottom: 1.4375rem;
+        }
     }
 
     &__container-left {
@@ -48,6 +55,7 @@
     
     &__channel {
         margin-bottom: 0.75rem;
+        font-weight: 700;
         @include tablet {
             margin-bottom: 0;
         }
@@ -81,6 +89,16 @@
         @include analytic-numbers();
         @include tablet {
             margin-left: 2.25rem;
+        }
+    }
+
+    &__description {
+        @include tablet {
+            padding-right: 1rem;
+        }
+        @include desktop {
+            padding-right: 1.875rem;
+            line-height: 1.4375rem;
         }
     }
 }

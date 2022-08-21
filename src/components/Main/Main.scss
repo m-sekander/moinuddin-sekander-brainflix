@@ -6,7 +6,7 @@
     &__sundry {
         @include desktop {
             display: flex;
-            max-width: $media-desktop;
+            max-width: $media-desktop-content;
             margin: 0 auto;
         }
     }
@@ -14,6 +14,7 @@
     &__details {
         @include desktop {
             border-right: 1px solid $secondary-color-divider;
+            width: 100%;
         }
     }
 }

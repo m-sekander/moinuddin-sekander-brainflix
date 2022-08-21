@@ -12,13 +12,12 @@
         max-height: 65vh;
     }
     @include desktop {
-        max-height: 57.5vh;
+        max-height: 56.25vh;
     }
     
     &__content {
         height: 100%;
         @include desktop {
-            max-width: $media-desktop;
             margin: 0 auto;
         }
     }
