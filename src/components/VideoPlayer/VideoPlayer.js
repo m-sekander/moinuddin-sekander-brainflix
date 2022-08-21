@@ -2,7 +2,9 @@ import './VideoPlayer.scss'
 
 function VideoPlayer({image}) {
     return (
-        <video className="video-player" poster={image} controls></video>
+        <div className="video-player">
+            <video className="video-player__content" poster={image} controls></video>
+        </div>
     )
 }
 
