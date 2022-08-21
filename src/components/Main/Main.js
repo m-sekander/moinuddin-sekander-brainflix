@@ -45,12 +45,10 @@ function Main() {
 
     return (
         <main className="main">
-            <div className="main__active">
-                <VideoPlayer image={selectedVideo.image}></VideoPlayer>
-                <VideoInfo formatEpoch={formatEpoch} title={selectedVideo.title} channel={selectedVideo.channel} description={selectedVideo.description} views={selectedVideo.views} likes={selectedVideo.likes} timestamp={selectedVideo.timestamp}></VideoInfo>
-                <CommentsSection formatEpoch={formatEpoch} comments={selectedVideo.comments}></CommentsSection>
-                <NextVideos videos={nonSelectedVideos} handleClick={handleClick}></NextVideos>
-            </div>
+            <VideoPlayer image={selectedVideo.image}></VideoPlayer>
+            <VideoInfo formatEpoch={formatEpoch} title={selectedVideo.title} channel={selectedVideo.channel} description={selectedVideo.description} views={selectedVideo.views} likes={selectedVideo.likes} timestamp={selectedVideo.timestamp}></VideoInfo>
+            <CommentsSection formatEpoch={formatEpoch} comments={selectedVideo.comments}></CommentsSection>
+            <NextVideos videos={nonSelectedVideos} handleClick={handleClick}></NextVideos>
         </main>
     )
 }
