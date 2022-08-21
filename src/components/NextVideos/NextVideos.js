@@ -1,10 +1,10 @@
 import Video from "../Video/Video"
 import "./NextVideos.scss"
 
-function NextVideos({videos}) {
+function NextVideos({videos, handleClick}) {
     const mappedVideos = videos.map((video) => {
         return (
-            <Video video={video} key={video.id}></Video>
+            <Video video={video} key={video.id} handleClick={handleClick}></Video>
         )
     })
 

@@ -5,6 +5,7 @@ import videoDetails from '../../data/video-details.json';
 import CommentsSection from '../CommentsSection/CommentsSection';
 import NextVideos from '../NextVideos/NextVideos';
 import videos from '../../data/videos.json';
+import {useState} from 'react';
 
 function Main() {
     function formatEpoch(timestamp) {
@@ -24,13 +25,31 @@ function Main() {
         }
     }
 
+    const [selectedVideo, setSelectedVideo] = useState(videoDetails[0]);
+    
+    const nonSelectedVideos = videos.filter((video) => {
+        return video.id !== selectedVideo.id
+    })
+
+    const handleClick = (videoId) => {
+        const newSelectedVideo = videoDetails.find((video) => {
+            return videoId === video.id
+        });
+        setSelectedVideo(newSelectedVideo);
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+
     return (
         <main className="main">
             <div className="main__active">
-                <VideoPlayer image={videoDetails[0].image}></VideoPlayer>
-                <VideoInfo formatEpoch={formatEpoch} title={videoDetails[0].title} channel={videoDetails[0].channel} description={videoDetails[0].description} views={videoDetails[0].views} likes={videoDetails[0].likes} timestamp={videoDetails[0].timestamp}></VideoInfo>
-                <CommentsSection formatEpoch={formatEpoch} comments={videoDetails[0].comments}></CommentsSection>
-                <NextVideos videos={videos}></NextVideos>
+                <VideoPlayer image={selectedVideo.image}></VideoPlayer>
+                <VideoInfo formatEpoch={formatEpoch} title={selectedVideo.title} channel={selectedVideo.channel} description={selectedVideo.description} views={selectedVideo.views} likes={selectedVideo.likes} timestamp={selectedVideo.timestamp}></VideoInfo>
+                <CommentsSection formatEpoch={formatEpoch} comments={selectedVideo.comments}></CommentsSection>
+                <NextVideos videos={nonSelectedVideos} handleClick={handleClick}></NextVideos>
             </div>
         </main>
     )
