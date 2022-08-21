@@ -12,9 +12,10 @@ function Header() {
             <div className="header__bar">
                 <input className="header__search" type="search" name="search" id="search" placeholder="Search" />
                 <img className="header__icon" src={SearchIcon} alt="" />
-                <img className="header__avatar" src={avatar} alt="Mohan's avatar" />
+                <img className="header__avatar avatar__mobile" src={avatar} alt="Mohan's avatar" />
             </div>
             <Button text="Upload" icon={uploadIcon}></Button>
+            <img className="header__avatar avatar__others" src={avatar} alt="Mohan's avatar" />
         </header>
     );
 }
