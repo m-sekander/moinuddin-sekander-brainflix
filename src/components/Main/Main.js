@@ -3,7 +3,8 @@ import VideoPlayer from '../VideoPlayer/VideoPlayer'
 import VideoInfo from '../VideoInfo/VideoInfo';
 import videoDetails from '../../data/video-details.json';
 import CommentsSection from '../CommentsSection/CommentsSection';
-// import videos from '../../data/videos.json';
+import NextVideos from '../NextVideos/NextVideos';
+import videos from '../../data/videos.json';
 
 function Main() {
     function formatEpoch(timestamp) {
@@ -29,6 +30,7 @@ function Main() {
                 <VideoPlayer image={videoDetails[0].image}></VideoPlayer>
                 <VideoInfo formatEpoch={formatEpoch} title={videoDetails[0].title} channel={videoDetails[0].channel} description={videoDetails[0].description} views={videoDetails[0].views} likes={videoDetails[0].likes} timestamp={videoDetails[0].timestamp}></VideoInfo>
                 <CommentsSection formatEpoch={formatEpoch} comments={videoDetails[0].comments}></CommentsSection>
+                <NextVideos videos={videos}></NextVideos>
             </div>
         </main>
     )
