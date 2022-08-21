@@ -2,23 +2,35 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/colors" as *;
 
-.commentsEngagement {
+.comments-engagement {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid $secondary-color-divider;
     padding: 1rem 0;
+    @include tablet {
+        padding-bottom: 1.625rem;
+    }
 
     &__avatar {
         border-radius: 50%;
-        max-width: 2.25rem;
+        width: 2.25rem;
         height: 2.25rem;
         object-fit: cover;
         object-position: 15%;
         margin: 1.375rem 0.875rem 0 0;
+        @include tablet {
+            min-width: 2.5rem;
+            height: 2.5rem;
+            margin: 1.375rem 0 0;
+        }
     }
 
     &__form {
         width: 100%;
+        @include tablet {
+            display: flex;
+            align-items: flex-end;
+        }
     }
 
     &__label {
@@ -28,6 +40,10 @@
         letter-spacing: 0.03125rem;
         margin-bottom: 1rem;
         text-transform: uppercase;
+        @include tablet {
+            width: 100%;
+            margin: 0 1.375rem;
+        }
     }
 
     &__comment {
@@ -40,6 +56,9 @@
         resize: none;
         color: $primary-color-text;
         margin-top: 0.125rem;
+        @include tablet {
+            height: 2.625rem;
+        }
 
         &::placeholder {
             color: $primary-color-text;

@@ -2,10 +2,16 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/colors" as *;
 
-.commentsSection {
+.comments-section {
     padding: 0 1.125rem;
+    @include tablet {
+        padding: 0 2.25rem;
+    }
 
     &__amount {
         margin-bottom: 0.25rem;
+        @include tablet {
+            margin-bottom: 0;
+        }
     }
 }

@@ -5,12 +5,12 @@ import commentIcon from '../../assets/images/add_comment.svg'
 
 function CommentsEngagement() {
     return (
-        <div className="commentsEngagement">
-            <img className="commentsEngagement__avatar" src={avatar} alt="serious man facing left" />
-            <form className="commentsEngagement__form">
-                <label className="commentsEngagement__label" htmlFor="comment">
+        <div className="comments-engagement">
+            <img className="comments-engagement__avatar" src={avatar} alt="serious man facing left" />
+            <form className="comments-engagement__form">
+                <label className="comments-engagement__label" htmlFor="comment">
                     Join the conversation
-                    <textarea className="commentsEngagement__comment" id="comment" name="comment" placeholder="Add a new comment"></textarea>
+                    <textarea className="comments-engagement__comment" id="comment" name="comment" placeholder="Add a new comment"></textarea>
                 </label>
                 <Button text="Comment" icon={commentIcon}></Button>
             </form>

@@ -10,10 +10,10 @@ function CommentsSection({formatEpoch, comments}) {
     })
 
     return (
-        <section className="commentsSection">
-            <h3 className="commentsSection__amount">{comments.length} Comments</h3>
+        <section className="comments-section">
+            <h3 className="comments-section__amount">{comments.length} Comments</h3>
             <CommentsEngagement></CommentsEngagement>
-            <div className="commentsSection__list">
+            <div className="comments-section__list">
                 {mappedComments}
             </div>
         </section>
