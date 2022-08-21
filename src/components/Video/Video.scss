@@ -9,6 +9,10 @@
         margin-top: 1.5rem;
     }
 
+    &:hover {
+        cursor: pointer;
+    }
+
     &__image {
         min-width: 6.625rem;
         height: calc(6.625rem * 9 / 16);
@@ -20,6 +24,10 @@
     &__details {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
+    }
+
+    &__title {
+        line-height: 1.1875rem;
     }
 }
