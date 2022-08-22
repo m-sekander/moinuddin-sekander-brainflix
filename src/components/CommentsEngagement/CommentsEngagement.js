@@ -12,7 +12,7 @@ function CommentsEngagement() {
                     Join the conversation
                     <textarea className="comments-engagement__comment" id="comment" name="comment" placeholder="Add a new comment"></textarea>
                 </label>
-                <Button text="Comment" icon={commentIcon}></Button>
+                <Button text="Comment" icon={commentIcon} isButton={true}></Button>
             </form>
         </div>
     )

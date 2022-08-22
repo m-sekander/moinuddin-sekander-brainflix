@@ -14,7 +14,7 @@ function Header() {
                 <img className="header__icon" src={SearchIcon} alt="" />
                 <img className="header__avatar avatar__mobile" src={avatar} alt="Mohan's avatar" />
             </div>
-            <Button text="Upload" icon={uploadIcon}></Button>
+            <Button text="Upload" icon={uploadIcon} isButton={false}></Button>
             <img className="header__avatar avatar__others" src={avatar} alt="Mohan's avatar" />
         </header>
     );
