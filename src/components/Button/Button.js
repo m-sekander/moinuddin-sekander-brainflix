@@ -1,6 +1,7 @@
 import './Button.scss'
+import {Link} from 'react-router-dom'   ;
 
-function Button({icon, text, isButton}) {
+function Button({icon, text, isButton, link}) {
     if (isButton) {
         return (
             <button className="button">
@@ -10,10 +11,10 @@ function Button({icon, text, isButton}) {
         );
     } else {
         return (
-            <a className="button">
+            <Link to={link} className="button">
                 <img className="button__icon" src={icon} alt=""/>
                 {text}
-            </a>
+            </Link>
         );
     }
 }

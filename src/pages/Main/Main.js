@@ -5,9 +5,18 @@ import videoDetails from '../../data/video-details.json';
 import CommentsSection from '../../components/CommentsSection/CommentsSection';
 import NextVideos from '../../components/NextVideos/NextVideos';
 import videos from '../../data/videos.json';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 function Main() {
+
+    useEffect(() => {
+        window.scroll({
+            top: 0,
+            right: 0,
+            behavior: 'smooth'
+        });
+    }, [])
+
     function formatEpoch(timestamp) {
         const date = new Date(timestamp);
 
