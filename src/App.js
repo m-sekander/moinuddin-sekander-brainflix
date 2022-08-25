@@ -1,12 +1,14 @@
 import './App.scss';
 import Header from './components/Header/Header';
-import Main from './components/Main/Main';
+import Main from './pages/Main/Main';
+import Upload from './pages/Upload/Upload';
 
 function App() {
   return (
     <div className="app">
       <Header></Header>
-      <Main></Main>
+      {/* <Main></Main> */}
+      <Upload></Upload>
     </div>
   );
 }

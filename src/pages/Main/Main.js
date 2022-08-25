@@ -1,9 +1,9 @@
 import './Main.scss'
-import VideoPlayer from '../VideoPlayer/VideoPlayer'
-import VideoInfo from '../VideoInfo/VideoInfo';
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
+import VideoInfo from '../../components/VideoInfo/VideoInfo';
 import videoDetails from '../../data/video-details.json';
-import CommentsSection from '../CommentsSection/CommentsSection';
-import NextVideos from '../NextVideos/NextVideos';
+import CommentsSection from '../../components/CommentsSection/CommentsSection';
+import NextVideos from '../../components/NextVideos/NextVideos';
 import videos from '../../data/videos.json';
 import {useState} from 'react';
 

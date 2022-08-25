@@ -11,7 +11,7 @@ function NextVideos({videos, handleClick}) {
 
     return (
         <section className="next-videos">
-            <h2 className="next-videos__title">NEXT VIDEOS</h2>
+            <h2 className="next-videos__title">Next Videos</h2>
             <div className="next-videos__list">
                 {mappedVideos}
             </div>
