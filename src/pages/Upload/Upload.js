@@ -4,17 +4,18 @@ import Button from '../../components/Button/Button'
 import publishIcon from '../../assets/images/publish.svg'
 import {Link} from 'react-router-dom'
 import {useEffect} from 'react'
+import checkMark from '../../assets/images/check-mark-computcheck-mark-blue-clip-art-icon.png'
 
 
 function Upload() {
 
-    useEffect(() => {
-        window.scroll({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
-    }, [])
+    // useEffect(() => {
+    //     window.scroll({
+    //         top: 0,
+    //         left: 0,
+    //         behavior: 'smooth'
+    //     });
+    // }, [])
 
     return (
         <main className="upload">
@@ -42,6 +43,15 @@ function Upload() {
                         <Link to="/" className="upload__cancel">Cancel</Link>
                     </div>
                 </form>
+                <div className="modal">
+                    <div className="modal__container">
+                        <img className="modal__image" src={checkMark} alt="" />
+                        <div className="modal__text">
+                            <h3 className="modal__message">Publish Successful!</h3>
+                            <Link className="modal__home" to="/">Go Home</Link>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
     )
