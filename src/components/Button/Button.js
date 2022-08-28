@@ -1,10 +1,10 @@
 import './Button.scss'
 import {Link} from 'react-router-dom'   ;
 
-function Button({icon, text, isButton, link}) {
+function Button({icon, text, isButton, link, handleClick}) {
     if (isButton) {
         return (
-            <button className="button">
+            <button className="button" onClick={handleClick}>
                 <img className="button__icon" src={icon} alt=""/>
                 {text}
             </button>
