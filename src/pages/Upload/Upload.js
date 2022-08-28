@@ -50,7 +50,7 @@ function Upload() {
                         <Link to="/" className="upload__cancel">Cancel</Link>
                     </div>
                 </form>
-                {(isPublished) && <Modal message="Publish Successful!" image={checkMark}></Modal>}
+                {(isPublished) && <Modal message="Published Successfully!" image={checkMark}></Modal>}
             </div>
         </main>
     )

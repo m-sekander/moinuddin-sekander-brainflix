@@ -150,5 +150,9 @@
             width: 7.5rem;
             padding-top: 0.5rem;
         }
+
+        &:hover {
+            color: $secondary-color-cta-hover;
+        }
     }
 }

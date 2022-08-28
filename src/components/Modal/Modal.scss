@@ -15,7 +15,7 @@
 
     &__container {
         background-color: $primary-color-cta-text;
-        width: 20rem;
+        width: 22.5rem;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -24,6 +24,7 @@
         border: 1px solid $primary-color-cta-outline;
         border-radius: 4px;
         box-shadow: 5px 10px $secondary-color-cta-hover;
+        padding: 0 0.5rem;
         @include tablet {
             width: 27.5rem;
             height: 9.25rem;
@@ -49,10 +50,16 @@
     &__message {
         font-size: 1.25rem;
         margin-bottom: 0.25rem;
+        font-weight: 400;
     }
 
     &__home {
         color: $primary-color-cta-outline;
         padding: 0.5rem;
+        font-weight: 600;
+
+        &:hover {
+            color: $secondary-color-cta-hover;
+        }
     }
 }
