@@ -1,11 +1,11 @@
 import Video from "../Video/Video"
 import "./NextVideos.scss"
 
-function NextVideos({videos, handleClick}) {
+function NextVideos({nonSelectedVideos}) {
     // Maps through each video in the array and outputs a video component for each
-    const mappedVideos = videos.map((video) => {
+    const mappedVideos = nonSelectedVideos.map((video) => {
         return (
-            <Video video={video} key={video.id} handleClick={handleClick}></Video>
+            <Video video={video} key={video.id}></Video>
         )
     })
 

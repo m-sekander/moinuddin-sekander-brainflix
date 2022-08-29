@@ -1,13 +1,25 @@
 import './Main.scss'
 import VideoPlayer from '../../components/VideoPlayer/VideoPlayer'
 import VideoInfo from '../../components/VideoInfo/VideoInfo';
-import videoDetails from '../../data/video-details.json';
 import CommentsSection from '../../components/CommentsSection/CommentsSection';
 import NextVideos from '../../components/NextVideos/NextVideos';
-import videos from '../../data/videos.json';
 import {useEffect, useState} from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import Modal from '../../components/Modal/Modal';
+import sadFace from '../../assets/images/850656-200-sad-face.png';
+
+
+const API_URL = "https://project-2-api.herokuapp.com";
+const API_KEY = "?api_key=23dd9335-4902-4efe-a62f-ee1827ad92dc";
+
 
 function Main() {
+    const [selectedVideo, setSelectedVideo] = useState(null);
+    const [videos, setVideos] = useState([]);
+    const [isError, setIsError] = useState(false);
+
+    const {videoId} = useParams();
 
     useEffect(() => {
         window.scroll({
@@ -15,7 +27,18 @@ function Main() {
             right: 0,
             behavior: 'smooth'
         });
-    }, [])
+        axios.get(`${API_URL}/videos/${API_KEY}`)
+        .then((result) => {
+            setVideos(result.data);
+            const selectedVideoId = videoId || result.data[0].id;
+            return axios.get(`${API_URL}/videos/${selectedVideoId}/${API_KEY}`);
+        }).then((result) => {
+            setSelectedVideo(result.data);
+        }).catch((error) => {
+            console.log("For devs:", error)
+            setIsError(true);
+        })
+    }, [videoId])
 
     function formatEpoch(timestamp) {
         const date = new Date(timestamp);
@@ -34,26 +57,26 @@ function Main() {
         }
     }
 
-    // Setup of the state on first video of the file
-    const [selectedVideo, setSelectedVideo] = useState(videoDetails[0]);
+    // Catch condition
+    if(isError) {
+        const idExists = videos.find((video) => videoId === video.id);
+        if (!idExists) {
+            return <Modal message="The video doesn't exist." image={sadFace} refresh={true}></Modal>;
+        }
+        return <h1>Request cannot be fullfilled at the moment. Please try again later.</h1>
+    }
+    
+    // Don't render while the API is looking for the video
+    if (!selectedVideo) {
+        return <main></main>
+    }
+    
     
     // Shows all videos but the one selected
     const nonSelectedVideos = videos.filter((video) => {
         return video.id !== selectedVideo.id
     })
     
-    // Click event that changes the state and scrolls to the top of the page
-    const handleClick = (videoId) => {
-        const newSelectedVideo = videoDetails.find((video) => {
-            return videoId === video.id
-        });
-        setSelectedVideo(newSelectedVideo);
-        window.scroll({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
-    }
 
     return (
         <main className="main">
@@ -63,7 +86,7 @@ function Main() {
                     <VideoInfo formatEpoch={formatEpoch} title={selectedVideo.title} channel={selectedVideo.channel} description={selectedVideo.description} views={selectedVideo.views} likes={selectedVideo.likes} timestamp={selectedVideo.timestamp}></VideoInfo>
                     <CommentsSection formatEpoch={formatEpoch} comments={selectedVideo.comments}></CommentsSection>
                 </div>
-                <NextVideos videos={nonSelectedVideos} handleClick={handleClick}></NextVideos>
+                <NextVideos nonSelectedVideos={nonSelectedVideos}></NextVideos>
             </div>
         </main>
     )
