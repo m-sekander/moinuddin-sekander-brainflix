@@ -10,17 +10,21 @@ import Modal from '../../components/Modal/Modal';
 import sadFace from '../../assets/images/850656-200-sad-face.png';
 
 
+// Sensitive info, please do not share to public
 const API_URL = "https://project-2-api.herokuapp.com";
 const API_KEY = "?api_key=23dd9335-4902-4efe-a62f-ee1827ad92dc";
 
 
 function Main() {
+    // Setting states to be used
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [videos, setVideos] = useState([]);
     const [isError, setIsError] = useState(false);
 
+    // Retreiving video id from the URL
     const {videoId} = useParams();
 
+    // Watching the change in the video id which is, in turn, watching for the change in the URL
     useEffect(() => {
         window.scroll({
             top: 0,

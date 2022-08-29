@@ -32,6 +32,10 @@
             width: 30rem;
             height: 11.25rem;
         }
+
+        &--hover {
+            box-shadow: 5px 10px rgba($secondary-color-cta-hover, 0.6);
+        }
     }
 
     &__image {

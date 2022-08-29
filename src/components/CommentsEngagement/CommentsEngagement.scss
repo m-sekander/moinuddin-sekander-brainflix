@@ -70,6 +70,10 @@
         &:focus-visible {
             outline: 2px solid $primary-color-cta-outline;
         }
+
+        &--error {
+            outline: 1px solid $error-outline;
+        }
     }
 
 }
