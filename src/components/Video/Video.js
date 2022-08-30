@@ -1,7 +1,7 @@
 import './Video.scss'
 import {Link} from 'react-router-dom'
 
-function Video({video}) {
+function Video({video, isMobile}) {
     // Function to add ellipsis as requested on the feedback
     function formatVideoTitle(title) {
         let formattedTitle = title;
@@ -22,7 +22,7 @@ function Video({video}) {
         <Link to={`/videos/${video.id}`} className="video">
             <img className="video__image" src={video.image} alt={video.title} />
             <div className="video__details">
-                <h3 className="video__title">{formatVideoTitle(video.title)}</h3>
+                <h3 className="video__title">{isMobile ? formatVideoTitle(video.title): video.title}</h3>
                 <span>{video.channel}</span>
             </div>
         </Link>

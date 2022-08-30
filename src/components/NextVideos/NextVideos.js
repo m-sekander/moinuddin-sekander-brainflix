@@ -1,11 +1,23 @@
 import Video from "../Video/Video"
 import "./NextVideos.scss"
+import {useEffect, useState} from 'react'
 
 function NextVideos({nonSelectedVideos}) {
+    // This useState used for letting video cards know when it is mobile for ellipsis
+    const [scrnSize, setScrnSize] = useState(window.innerWidth);
+
+    useEffect(() => {
+        window.addEventListener('resize', () => setScrnSize(window.innerWidth));
+
+        return () => {
+            window.removeEventListener('resize', () => setScrnSize(window.innerWidth));
+        }}
+    , [scrnSize])
+
     // Maps through each video in the array and outputs a video component for each
     const mappedVideos = nonSelectedVideos.map((video) => {
         return (
-            <Video video={video} key={video.id}></Video>
+            <Video video={video} key={video.id} isMobile={scrnSize<768}></Video>
         )
     })
 
