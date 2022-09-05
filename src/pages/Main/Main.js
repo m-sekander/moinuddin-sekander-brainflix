@@ -11,8 +11,8 @@ import sadFace from '../../assets/images/850656-200-sad-face.png';
 
 
 // Sensitive info, please do not share to public
-const API_URL = "https://project-2-api.herokuapp.com";
-const API_KEY = "?api_key=23dd9335-4902-4efe-a62f-ee1827ad92dc";
+const API_URL = "http://localhost:8080";
+const API_KEY = "?api_key=anything-but-nothing";
 
 
 function Main() {
@@ -39,7 +39,7 @@ function Main() {
         }).then((result) => {
             setSelectedVideo(result.data);
         }).catch((error) => {
-            console.log("For devs:", error)
+            console.log("For devs:", error.response)
             setIsError(true);
         })
     }, [videoId])

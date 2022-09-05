@@ -98,6 +98,10 @@
         &:focus-visible {
             outline: 2px solid $primary-color-cta-outline;
         }
+
+        &--error {
+            outline: 1px solid $error-outline;
+        }
     }
 
     &__description {
@@ -125,6 +129,10 @@
         &:focus-visible {
             outline: 2px solid $primary-color-cta-outline;
         }
+
+        &--error {
+            outline: 1px solid $error-outline;
+        }
     }
 
     &__cta {
@@ -132,6 +140,21 @@
             display: flex;
             flex-direction: row-reverse;
             padding: 0.25rem 0;
+            position: relative;
+        }
+    }
+
+    &__error {
+        display: block;
+        color: #D22D2D;
+        font-size: 0.8125rem;
+        margin-bottom: 1.375rem;
+        text-align: center;
+        @include tablet {
+            margin: 0.25rem auto 0.25rem 0rem;
+            width: fit-content;
+            position: absolute;
+            left: 0;
         }
     }
 
