@@ -23,7 +23,7 @@ function CommentsSection({formatEpoch, comments}) {
     return (
         <section className="comments-section">
             <h3 className="comments-section__amount">{comments.length} Comments</h3>
-            <CommentsEngagement></CommentsEngagement>
+            {/* <CommentsEngagement></CommentsEngagement> */}
             <div className="comments-section__list">
                 {mappedComments}
             </div>
