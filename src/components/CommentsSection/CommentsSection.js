@@ -1,5 +1,5 @@
 import './CommentsSection.scss'
-import CommentsEngagement from '../CommentsEngagement/CommentsEngagement'
+// import CommentsEngagement from '../CommentsEngagement/CommentsEngagement'
 import Comment from '../Comment/Comment'
 
 function CommentsSection({formatEpoch, comments}) {

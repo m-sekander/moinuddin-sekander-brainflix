@@ -10,7 +10,7 @@ import Modal from '../../components/Modal/Modal'
 
 
 // Sensitive info, please do not share to public
-const API_URL = "http://localhost:8080";
+const API_URL = process.env.REACT_APP_SERVER;
 const API_KEY = "?api_key=anything-but-nothing";
 
 
@@ -35,7 +35,7 @@ function Upload() {
         
         const videoToPost = {
             title: event.target.title.value,
-            image: 'http://localhost:8080/images/Upload-video-preview.jpg',
+            image: `${process.env.REACT_APP_SERVER}/images/Upload-video-preview.jpg`,
             description: event.target.description.value
         }
         

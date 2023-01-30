@@ -11,7 +11,7 @@ import sadFace from '../../assets/images/850656-200-sad-face.png';
 
 
 // Sensitive info, please do not share to public
-const API_URL = "http://localhost:8080";
+const API_URL = process.env.REACT_APP_SERVER;
 const API_KEY = "?api_key=anything-but-nothing";
 
 
